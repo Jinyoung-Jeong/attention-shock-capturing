@@ -1,0 +1,32 @@
+problem: burgers_2d
+data:
+  directory: artifacts/smoke/data
+  grid_size: 16
+  reference_factor: 1
+  reference_cfl: 0.2
+  base_cfl: 0.4
+  base_frames: 12
+  train_samples: 4
+  validation_samples: 2
+  test_samples: 2
+  split_seeds: {train: 2101, validation: 2201, test: 2301}
+model: {d_model: 16, heads: 4, decoder_width: 16, query_skip: true, consistent_flux: false}
+training:
+  seeds: [2027, 2028, 2029]
+  batch_size: 1
+  epochs: 1
+  iterations_per_epoch: 1
+  learning_rate: 1.0e-4
+  minimum_learning_rate: 1.0e-6
+  weight_decay: 1.0e-5
+  gradient_clip: 1.0
+  gradient_weight: 2.0
+  rollout_min: 2
+  rollout_max: 2
+  strides: [1, 2, 3, 4]
+  validation_stride: 4
+  validation_steps: 2
+  maximum_loss: 1.0e6
+  deterministic: false
+evaluation: {method_label: CFL-conditioned attention, batch_size: 1, cfl_values: [0.4, 0.8, 1.2, 1.6], diagnostic_cfl: 1.6, timing_samples: 1, timing_warmup: 0, timing_repeats: 1}
+output: {directory: artifacts/smoke/runs}

@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+title: "Attention Is All You Need (to Avoid Spurious Oscillations): Research Code"
+message: "Please cite the accompanying paper if you use this code or data."
+type: software
+authors:
+  - family-names: Jeong
+    given-names: Jinyoung
+  - family-names: Choi
+    given-names: Joseph B.
+  - family-names: Cheng
+    given-names: Xinlun
+  - family-names: Udaykumar
+    given-names: H. S.
+  - family-names: Choi
+    given-names: Sanghun
+  - family-names: Baek
+    given-names: Stephen S.
+version: 0.1.0
+date-released: 2026-09-12
+license: MIT
+repository-code: "https://github.com/Jinyoung-Jeong/attention-shock-capturing"

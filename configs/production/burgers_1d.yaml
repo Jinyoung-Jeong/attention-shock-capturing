@@ -1,0 +1,39 @@
+problem: burgers_1d
+data:
+  directory: artifacts/production/data
+  grid_size: 256
+  base_cfl: 0.4
+  base_frames: 84
+  train_samples: 2048
+  validation_samples: 256
+  test_samples: 256
+  lax_hopf_quadrature: 8
+  split_seeds: {train: 1101, validation: 1201, test: 1301}
+model: {d_model: 32, heads: 4, decoder_width: 64, query_skip: true, consistent_flux: false}
+training:
+  seeds: [2027, 2028, 2029]
+  batch_size: 8
+  epochs: 200
+  iterations_per_epoch: 1000
+  learning_rate: 1.0e-4
+  minimum_learning_rate: 1.0e-6
+  weight_decay: 1.0e-5
+  gradient_clip: 1.0
+  gradient_weight: 4.0
+  rollout_min: 2
+  rollout_max: 20
+  strides: [1, 2, 3, 4]
+  validation_stride: 4
+  validation_steps: 20
+  validation_interval: 5
+  maximum_loss: 1.0e6
+  deterministic: false
+evaluation:
+  method_label: CFL-conditioned attention
+  batch_size: 64
+  cfl_values: [0.4, 0.8, 1.2, 1.6, 2.4, 2.8]
+  diagnostic_cfl: 1.6
+  timing_samples: 8
+  timing_warmup: 1
+  timing_repeats: 5
+output: {directory: artifacts/production/runs}

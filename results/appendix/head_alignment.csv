@@ -1,0 +1,13 @@
+seed,raw_head,reference_seed,reference_head,functional_role,matching_cost
+2027,0,2027,0,shorter_reach_diffuse,0.0
+2027,1,2027,1,longer_reach_diffuse,0.0
+2027,2,2027,2,longer_reach_selective,0.0
+2027,3,2027,3,shorter_reach_selective,0.0
+2028,0,2027,2,longer_reach_selective,2.6188723788450265
+2028,1,2027,0,shorter_reach_diffuse,3.4861920397979524
+2028,2,2027,3,shorter_reach_selective,5.01559495482083
+2028,3,2027,1,longer_reach_diffuse,8.712704917874202
+2029,0,2027,0,shorter_reach_diffuse,1.1180049877718012
+2029,1,2027,3,shorter_reach_selective,7.869601754319637
+2029,2,2027,2,longer_reach_selective,8.846357947153985
+2029,3,2027,1,longer_reach_diffuse,1.338137485183719

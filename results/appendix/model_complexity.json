@@ -1,0 +1,17 @@
+{
+  "models": [
+    {
+      "config": "configs/production/burgers_1d.yaml",
+      "method_label": "CFL-conditioned attention",
+      "problem": "burgers_1d",
+      "trainable_parameters": 7585
+    },
+    {
+      "config": "configs/production/burgers_1d_stencil_mlp.yaml",
+      "method_label": "Parameter-matched ordered-stencil MLP",
+      "problem": "burgers_1d",
+      "relative_parameter_difference_from_first": -0.011074489123269582,
+      "trainable_parameters": 7501
+    }
+  ]
+}
